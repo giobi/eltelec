@@ -55,6 +55,46 @@
             padding: 0 2rem;
         }
 
+        /* Navigation */
+        nav {
+            background: var(--bg-primary);
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: var(--font-header);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-primary);
+        }
+
         /* Hero Section - Asymmetric 40/60 */
         .hero {
             display: grid;
@@ -62,7 +102,7 @@
             gap: 4rem;
             min-height: 80vh;
             align-items: center;
-            padding: 4rem 0;
+            padding: 4rem 2rem;
             background: var(--bg-secondary);
         }
 
@@ -243,10 +283,19 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 0.875rem;
+            }
+
             .hero {
                 grid-template-columns: 1fr;
                 gap: 2rem;
                 min-height: auto;
+                padding: 2rem 1rem;
             }
 
             .hero-content h1 {
@@ -269,6 +318,17 @@
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Eltelec</div>
+            <ul>
+                <li><a href="#servizi">Servizi</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container" style="grid-column: 1 / -1; display: contents;">
@@ -287,7 +347,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section class="services" id="servizi">
         <div class="container">
             <h2>I Nostri Servizi</h2>
             <p class="subtitle">Soluzioni complete per ogni esigenza di connettività</p>
@@ -349,7 +409,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
+    <section class="contact" id="contatti">
         <div class="container">
             <h2>Contattaci</h2>
             <p>Sopralluogo gratuito e preventivo senza impegno</p>
