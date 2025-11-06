@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eltelec - Installazioni Connettività e Telecomunicazioni</title>
+    <meta name="description" content="Eltelec - Installazioni professionali di connettività, antenne, impianti telecomunicazioni e cablaggi. Fabio Brusa.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-light: #f3f4f6;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 6rem 0 8rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services */
+        .services {
+            padding: 4rem 0;
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .contact-value {
+            color: var(--text-light);
+        }
+
+        .contact-value a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">ELTELEC</div>
+            <p class="tagline">Installazioni professionali di connettività, antenne e impianti telecomunicazioni</p>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Servizi</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📡</div>
+                    <h3>Antenne</h3>
+                    <p>Installazione e manutenzione di antenne TV, digitale terrestre e satellitare. Impianti condominiali e privati.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Connettività</h3>
+                    <p>Installazione reti internet, cablaggi strutturati, fibra ottica e configurazione apparati di rete.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔌</div>
+                    <h3>Impianti Telecomunicazioni</h3>
+                    <p>Progettazione e realizzazione di impianti per telecomunicazioni, citofoni e videocitofoni.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Cablaggio Strutturato</h3>
+                    <p>Cablaggio strutturato per uffici e abitazioni. Certificazione impianti e messa a norma.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Manutenzione</h3>
+                    <p>Assistenza tecnica, riparazioni, manutenzione ordinaria e straordinaria impianti esistenti.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📞</div>
+                    <h3>Consulenza</h3>
+                    <p>Progettazione personalizzata, sopralluoghi e preventivi gratuiti per privati e aziende.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Contatti</h2>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-light);">
+                Per preventivi gratuiti, sopralluoghi o informazioni sui servizi, contattami direttamente.
+            </p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">👤</div>
+                    <div class="contact-label">Fabio Brusa</div>
+                    <div class="contact-value">Titolare</div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">
+                        <a href="mailto:info@eltelec.it">info@eltelec.it</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-label">Telefono</div>
+                    <div class="contact-value">
+                        <a href="tel:+393483867766">+39 348 386 7766</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="tel:+393483867766" class="cta-button">Chiama ora</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Eltelec - Fabio Brusa | P.IVA: [DA INSERIRE]</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Installazioni connettività, antenne e telecomunicazioni</p>
+        </div>
+    </footer>
+</body>
+</html>
